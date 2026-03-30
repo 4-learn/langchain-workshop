@@ -21,7 +21,7 @@ python 03_test_violations.py
 ...
 """
 
-from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
@@ -31,7 +31,7 @@ prompt = ChatPromptTemplate.from_messages([
     ("human", "{violation}")
 ])
 
-llm = ChatOpenAI(model="gpt-4o-mini")
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
 parser = StrOutputParser()
 
 chain = prompt | llm | parser

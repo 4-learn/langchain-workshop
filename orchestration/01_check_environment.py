@@ -9,10 +9,10 @@ Hello! How can I assist you today?
 （或其他 LLM 的回應）
 """
 
-from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 # 建立 LLM
-llm = ChatOpenAI(model="gpt-4o-mini")
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
 
 # 測試
 response = llm.invoke("說 Hello")

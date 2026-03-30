@@ -14,7 +14,7 @@ python 02_first_chain.py
 - 可能違反職業安全衛生法規
 """
 
-from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
@@ -25,7 +25,7 @@ prompt = ChatPromptTemplate.from_messages([
 ])
 
 # 2. 建立 LLM
-llm = ChatOpenAI(model="gpt-4o-mini")
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
 
 # 3. 建立 Parser
 parser = StrOutputParser()
